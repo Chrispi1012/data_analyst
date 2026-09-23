@@ -1,0 +1,160 @@
+order_id,order_date,customer_id,customer_name,product,category,quantity,unit_price,region,status,discount_code
+ORD10091,6/12/2025,C1030,Paul Lopez,Mechanical Keyboard,electronics,11,58.5,south west,COMPLETED,
+ORD10131,11/12/2025,C1019,  Anthony Hernandez  ,Laptop Stand,Office,3,36.79,MIDWEST,cancelled,
+ORD10041,31-Mar-25,C1036,  Sandra Brown  ,Desk Mat,OFFICE,8,20.72,SW,,
+ORD10110,12/7/2025,C1029,Elizabeth Martin,Ballpoint Pens (12pk),Office Supplies,11,6.48,NORTHEAST,cancelled,
+ORD10102,15-12-2025,C1024,Betty Johnson,Office Chair,Furniture,4,149.11,MW,Cancelled,
+ORD10085,23-09-2025,C1025,Lisa Anderson,USB-C Cable,Electronics,12,9.71,south east,completed,
+ORD10079,28-Jan-25,C1027,ASHLEY GONZALEZ,Ergonomic Footrest,FURNITURE,4,28.32,Southeast,completed,
+ORD10117,3-Jun-25,C1022,Jennifer Lopez,Office Chair,Furniture,3.2,148.89000000000001,S.East,Pending,
+ORD10050,12/16/2025,C1026,Sarah Brown,Mechanical Keyboard,Electronics,10,$59.99 ,west,Completed,
+ORD10064,5/23/2025,C1030,Paul Lopez,Office Chair,furniture,7,151.89000000000001,south west,Completed,
+ORD10025,28-07-2025,C1034,ANTHONY MARTINEZ,USB-C Cable,ELECTRONICS,7,$9.99 ,WEST coast,Completed,
+ORD10096,9/12/2025,C1036,Sandra Brown,Ballpoint Pens (12pk),Office Supplies,N/A,4.82,SE,Completed,WELCOME5
+ORD10014,12/6/2025,C1019,Anthony Hernandez,Wireless Mouse,Electronics,3,21.549999999999997,Southwest,Returned,
+ORD10150,19-Mar-25,C1004,  Karen Moore  ,Notebook Set,Office Supplies,8,5.34,NE,Pending,
+ORD10127,6/27/2025,C1034,Anthony Martinez,Monitor 24in,Electronics,N/A,179.99 USD,north east,Pending,
+ORD10067,7/22/2025,C1027,ASHLEY GONZALEZ,Ballpoint Pens (12pk),OFFICE SUPPLIES,-2,3.83,south east,completed,
+ORD10046,3-Oct-25,C1019,Anthony Hernandez,Desk Mat,office,9,21.5,MW,Returned,
+ORD10012,8/3/2025,C1015,Anthony Garcia,Bluetooth Speaker,Electronics,6,43.81,MW,COMPLETED,
+ORD10073,9/16/2025,C1009,Charles Martin,Desk Mat,Office,9,22.09,Southwest,Cancelled,
+ORD10029,7/8/2025,C1015,ANTHONY GARCIA,Laptop Stand,Office,12,36.1,south east,Completed,
+ORD10138,8-Aug-25,,Michael Moore,Bluetooth Speaker,Electronics,-2,44.99 USD,NORTHEAST,COMPLETED,
+ORD10053,7/6/2025,C1008,Michael Davis,Desk Lamp,OFFICE,N/A,25.979999999999997,SE,cancelled,
+ORD10066,3/21/2025,C1010,James Moore,Bluetooth Speaker,Electronics,1,44.080000000000005,WEST coast,Pending,
+ORD10033,28-Jul-25,,Thomas Lopez,Laptop Stand,office,4,35.57,WEST coast,completed,WELCOME5
+ORD10103,10/21/2025,C1031,Chris Miller,File Organizer,Office Supplies,7,16.81,,completed,
+ORD10124,12/23/2025,C1022,Jennifer Lopez,Standing Desk,Furniture,2,301.42,Northeast,Pending,
+ORD10095,4-May-25,C1022,Jennifer Lopez,Ballpoint Pens (12pk),office supplies,,3.5500000000000003,north east,Pending,SAVE10
+ORD10080,29-Aug-25,C1009,CHARLES MARTIN,Monitor 24in,Electronics,2,$179.99 ,SE,Pending,WELCOME5
+ORD10038,2/8/2025,C1013,Thomas Jackson,Laptop Stand,office,-4,34.870000000000005,NE,Cancelled,
+ORD10114,6-Oct-25,,Michael Davis,Wireless Mouse,Electronics,4,19.369999999999997,MW,completed,
+ORD10109,23-Mar-25,C1036,SANDRA BROWN,Wireless Mouse,Electronics,12,20.75,mid west,Returned,
+ORD10130,10/14/2025,,Thomas Lopez,Standing Desk,FURNITURE,3,298.67,mid west,COMPLETED,WELCOME5
+ORD10047,11/30/2025,C1026,SARAH BROWN,File Organizer,Office Supplies,1,$14.99 ,SW,,none
+ORD10071,18-11-2025,C1037,Joseph Rodriguez,Webcam HD,Electronics,0,$39.99 ,west,Completed,
+ORD10083,6/30/2025,C1015,Anthony Garcia,Monitor 24in,Electronics,11,,WEST coast,COMPLETED,none
+ORD10142,10/21/2025,C1018,John Miller,File Organizer,Office Supplies,9,14.46,N.East,Pending,
+ORD10134,21-Dec-25,C1027,  Ashley Gonzalez  ,Notebook Set,Office Supplies,6,8.24,south west,completed,
+ORD10061,11/16/2025,C1028,  ROBERT MOORE  ,Mechanical Keyboard,electronics,6,60.38,MIDWEST,Pending,
+ORD10135,19-Jun-25,C1022,Jennifer Lopez,Webcam HD,Electronics,,$39.99 ,SE,Pending,
+ORD10023,5/8/2025,C1006,Susan Johnson,Monitor 24in,ELECTRONICS,8,181.94,SW,,
+ORD10144,5/29/2025,C1003,John Brown,USB-C Cable,Electronics,9,10.71,NE,Pending,
+ORD10027,10/31/2025,C1025,Lisa Anderson,Bluetooth Speaker,Electronics,2,43.53,,Pending,
+ORD10036,10-May-25,C1006,Susan Johnson,Notebook Set,Office Supplies,,$6.99 ,West,Completed,
+ORD10052,1/26/2025,C1018,JOHN MILLER,Wireless Mouse,Electronics,5,18.909999999999997,MW,Cancelled,
+ORD10042,6-Dec-25,C1026,Sarah Brown,Office Chair,Furniture,9,$149.99 ,north east,completed,
+ORD10037,25-Sep-25,C1005,Robert Jackson,Bluetooth Speaker,Electronics,8,45.34,west,Completed,
+ORD10006,9/1/2025,C1005,Robert Jackson,Ballpoint Pens (12pk),Office Supplies,3.1,6.8500000000000005,south west,Cancelled,
+ORD10149,2/6/2025,C1028,ROBERT MOORE,Desk Mat,Office,12,20.4,mid west,COMPLETED,
+ORD10018,23-05-2025,C1014,David Smith,Desk Lamp,Office,7,26.36,Midwest,Cancelled,none
+ORD10112,4/22/2025,C1003,John Brown,Wireless Mouse,Electronics,N/A,20.79,Southwest,completed,
+ORD10100,5/16/2025,C1026,Sarah Brown,Monitor 24in,Electronics,12,$179.99 ,W,Pending,
+ORD10121,8-Sep-25,C1024,Betty Johnson,Webcam HD,Electronics,12,38.67,SW,Completed,
+ORD10087,1/5/2025,C1010,James Moore,File Organizer,Office Supplies,10,$14.99 ,S.East,cancelled,
+ORD10141,11-Sep-25,C1022,Jennifer Lopez,Standing Desk,Furniture,7,299.77,Southeast,Returned,WELCOME5
+ORD10075,3/7/2025,C1025,LISA ANDERSON,Ballpoint Pens (12pk),Office Supplies,N/A,5.0200000000000005,north east,Returned,
+ORD10133,8/25/2025,C1012,Susan Davis,Ballpoint Pens (12pk),office supplies,5,3.2700000000000005,WEST coast,Cancelled,
+ORD10078,5/9/2025,C1024,Betty Johnson,Laptop Stand,Office,6,33.4,Southwest,COMPLETED,
+ORD10009,8/18/2025,C1006,SUSAN JOHNSON,Mechanical Keyboard,Electronics,5,61.49,N.East,completed,
+ORD10063,6/18/2025,C1006,Susan Johnson,Wireless Mouse,Electronics,11,19.68,north east,cancelled,
+ORD10122,11/19/2025,C1004,Karen Moore,Standing Desk,furniture,N/A,,S.East,,none
+ORD10145,13-Dec-25,C1008,Michael Davis,Office Chair,Furniture,10,150.5,,completed,
+ORD10081,9/13/2025,C1007,JAMES WILLIAMS,Notebook Set,office supplies,11,5.96,south east,cancelled,WELCOME5
+ORD10030,23-12-2025,C1024,Betty Johnson,Monitor 24in,Electronics,10,181.17000000000002,Southwest,Pending,
+ORD10004,27-02-2025,C1000,Daniel Brown,File Organizer,Office Supplies,8,$14.99 ,MW,completed,
+ORD10040,10-Sep-25,C1018,John Miller,Standing Desk,Furniture,N/A,$299.99 ,west,Completed,
+ORD10089,16-12-2025,C1012,SUSAN DAVIS,Ergonomic Footrest,Furniture,12,$29.99 ,SW,COMPLETED,
+ORD10147,20-Feb-25,C1036,Sandra Brown,File Organizer,office supplies,-2,12.99,W,COMPLETED,
+ORD10055,12/12/2025,C1023,Nancy Rodriguez,Desk Mat,Office,10,22.24,Southwest,,
+ORD10044,7/28/2025,C1001,James Rodriguez,USB-C Cable,ELECTRONICS,2,8.46,S.East,Cancelled,
+ORD10099,12/11/2025,C1009,Charles Martin,Bluetooth Speaker,Electronics,9,45.120000000000005,SW,Completed,
+ORD10146,23-08-2025,C1023,Nancy Rodriguez,Desk Mat,Office,9,23.86,S.East,Cancelled,
+ORD10116,9/24/2025,C1036,Sandra Brown,Desk Lamp,Office,5,$24.99 ,south west,Pending,none
+ORD10060,4/24/2025,C1007,James Williams,Ballpoint Pens (12pk),Office Supplies,-5,5.5600000000000005,Northeast,Pending,
+ORD10016,7/6/2025,C1009,Charles Martin,USB-C Cable,ELECTRONICS,4,10.66,MIDWEST,COMPLETED,
+ORD10054,28-Feb-25,C1010,James Moore,File Organizer,Office Supplies,3,13.89,west,Pending,
+ORD10021,12/12/2025,C1019,Anthony Hernandez,Webcam HD,Electronics,12,,north east,cancelled,SAVE10
+ORD10015,5/8/2025,C1016,Matthew Wilson,Wireless Mouse,electronics,-3,20.54,MW,Pending,
+ORD10086,6/30/2025,C1028,Robert Moore,Office Chair,Furniture,5,151.16,Northeast,Pending,
+ORD10077,26-May-25,C1010,  James Moore  ,Monitor 24in,Electronics,4,181.22,W,,
+ORD10010,1/31/2025,C1005,Robert Jackson,Notebook Set,Office Supplies,7,8.13,west,,WELCOME5
+ORD10013,2/7/2025,,Linda Williams,Bluetooth Speaker,Electronics,5,$44.99 ,Midwest,cancelled,WELCOME5
+ORD10125,2/18/2025,C1000,  Daniel Brown  ,Webcam HD,Electronics,4,39.99 USD,SW,completed,
+ORD10048,16-Nov-25,C1009,Charles Martin,Notebook Set,Office Supplies,6,8.43,west,,none
+ORD10059,2/26/2025,C1038,THOMAS LOPEZ,USB-C Cable,Electronics,0,11.14,,Cancelled,
+ORD10022,22-Aug-25,,David Smith,Notebook Set,Office Supplies,10,,WEST coast,COMPLETED,none
+ORD10073,9/16/2025,C1009,Charles Martin,Desk Mat,Office,-4,22.09,Southwest,Cancelled,
+ORD10108,12/9/2025,C1011,Michael Moore,Standing Desk,FURNITURE,1.6,298.98,MIDWEST,Cancelled,
+ORD10019,10/23/2025,C1038,Thomas Lopez,Bluetooth Speaker,Electronics,12,45.07,south west,Returned,
+ORD10051,6/8/2025,C1018,John Miller,Office Chair,Furniture,5,,WEST coast,Pending,
+ORD10129,5/19/2025,C1009,Charles Martin,Wireless Mouse,Electronics,0,,WEST coast,completed,
+ORD10003,1/25/2025,C1037,Joseph Rodriguez,USB-C Cable,ELECTRONICS,0,,West,,
+ORD10123,15-Sep-25,C1034,  Anthony Martinez  ,Desk Lamp,Office,3,$24.99 ,NORTHEAST,Returned,
+ORD10082,10/11/2025,C1005,Robert Jackson,Ballpoint Pens (12pk),Office Supplies,8,$4.99 ,west,Completed,
+ORD10074,14-Dec-25,C1038,THOMAS LOPEZ,Office Chair,furniture,12,151.85000000000002,Southwest,COMPLETED,
+ORD10058,6/20/2025,C1029,ELIZABETH MARTIN,Wireless Mouse,electronics,10,19.99 USD,Southwest,Returned,
+ORD10031,8/24/2025,C1021,JOSEPH BROWN,Standing Desk,Furniture,12,300.59000000000003,south west,,
+ORD10034,19-06-2025,C1019,Anthony Hernandez,Office Chair,Furniture,5,148.91,south east,COMPLETED,
+ORD10107,4/9/2025,C1029,Elizabeth Martin,USB-C Cable,Electronics,12,9.02,Southeast,Cancelled,
+ORD10132,23-07-2025,C1038,THOMAS LOPEZ,Laptop Stand,Office,12,36.86,south east,Pending,
+ORD10028,8/29/2025,C1021,Joseph Brown,Desk Mat,Office,1,21.389999999999997,Northeast,Returned,SAVE10
+ORD10140,22-Oct-25,C1015,Anthony Garcia,Ballpoint Pens (12pk),Office Supplies,8,5.76,SE,COMPLETED,WELCOME5
+ORD10105,1-Dec-25,,PAUL LOPEZ,Ballpoint Pens (12pk),Office Supplies,4,4.140000000000001,Midwest,completed,
+ORD10092,6/27/2025,C1003,John Brown,USB-C Cable,Electronics,2,10.530000000000001,SW,Cancelled,
+ORD10053,7/6/2025,C1008,Michael Davis,Desk Lamp,OFFICE,9,25.979999999999997,SE,cancelled,
+ORD10098,13-10-2025,C1039,Patricia Lopez,Standing Desk,Furniture,4,299.6,,cancelled,
+ORD10115,1/25/2025,C1001,  James Rodriguez  ,Notebook Set,Office Supplies,7,7.15,NE,Cancelled,
+ORD10101,15-Apr-25,,Sandra Brown,Office Chair,Furniture,10,151.48000000000002,NE,cancelled,
+ORD10022,22-Aug-25,,David Smith,Notebook Set,Office Supplies,10,,WEST coast,COMPLETED,none
+ORD10097,26-07-2025,C1030,  Paul Lopez  ,USB-C Cable,Electronics,-1,8.77,,,
+ORD10120,29-08-2025,C1034,Anthony Martinez,Ergonomic Footrest,FURNITURE,6,28.169999999999998,,Pending,SAVE10
+ORD10118,2/17/2025,C1008,Michael Davis,Mechanical Keyboard,Electronics,4,$59.99 ,West,Returned,
+ORD10008,8/31/2025,C1015,Anthony Garcia,Monitor 24in,Electronics,7,,N.East,Pending,
+ORD10062,24-Jul-25,C1035,Robert Davis,Laptop Stand,Office,6,35.65,MW,,SAVE10
+ORD10126,4/17/2025,C1034,  Anthony Martinez  ,Office Chair,furniture,0,151.27,north east,Returned,
+ORD10036,10-May-25,C1006,Susan Johnson,Notebook Set,Office Supplies,,$6.99 ,West,Completed,
+ORD10106,23-Jul-25,C1002,Barbara Davis,USB-C Cable,ELECTRONICS,4,9.15,Northeast,completed,
+ORD10011,9/2/2025,C1003,John Brown,Wireless Mouse,electronics,9,,Southwest,completed,
+ORD10071,18-11-2025,C1037,Joseph Rodriguez,Webcam HD,Electronics,0,$39.99 ,west,Completed,
+ORD10072,2/16/2025,C1029,  Elizabeth Martin  ,Mechanical Keyboard,Electronics,7,60.21,N.East,Returned,
+ORD10142,10/21/2025,C1018,John Miller,File Organizer,Office Supplies,9,14.46,N.East,Pending,
+ORD10139,7/20/2025,C1007,James Williams,Webcam HD,Electronics,,39.82,south east,completed,
+ORD10094,8/21/2025,C1034,Anthony Martinez,File Organizer,Office Supplies,3,14.93,south east,cancelled,
+ORD10032,8/26/2025,C1017,Richard Rodriguez,Desk Lamp,Office,7,24.97,MW,cancelled,
+ORD10119,4/8/2025,C1035,Robert Davis,Desk Lamp,OFFICE,8,25.77,S.East,cancelled,
+ORD10017,20-Jun-25,C1010,James Moore,Wireless Mouse,electronics,12,19.06,N.East,,WELCOME5
+ORD10065,3/15/2025,C1017,RICHARD RODRIGUEZ,Ergonomic Footrest,FURNITURE,2,$29.99 ,Northeast,Returned,
+ORD10002,18-10-2025,C1003,  John Brown  ,Desk Lamp,office,8,26.65,W,Returned,
+ORD10049,2/20/2025,C1004,Karen Moore,Laptop Stand,Office,12,33.11,Midwest,cancelled,
+ORD10084,6-Oct-25,,SUSAN DAVIS,Ergonomic Footrest,Furniture,11,,Midwest,cancelled,WELCOME5
+ORD10007,1/11/2025,C1023,Nancy Rodriguez,Laptop Stand,office,5,34.99 USD,Northeast,Completed,
+ORD10088,6-Apr-25,C1008,Michael Davis,Laptop Stand,OFFICE,9,$34.99 ,MIDWEST,Cancelled,
+ORD10005,1/1/2025,C1032,Matthew Williams,Ballpoint Pens (12pk),Office Supplies,1,$4.99 ,mid west,Returned,
+ORD10039,2/28/2025,C1014,David Smith,Webcam HD,Electronics,3,41.300000000000004,Northeast,Cancelled,
+ORD10148,22-07-2025,C1017,RICHARD RODRIGUEZ,Webcam HD,Electronics,4,38.35,Northeast,completed,SAVE10
+ORD10035,7/4/2025,C1037,Joseph Rodriguez,Mechanical Keyboard,Electronics,12,59.09,NORTHEAST,COMPLETED,
+ORD10113,15-Jul-25,C1018,John Miller,Monitor 24in,Electronics,7,180.72,Southwest,cancelled,
+ORD10057,1/5/2025,C1031,Chris Miller,Monitor 24in,Electronics,N/A,180.17000000000002,Midwest,Returned,
+ORD10070,2/22/2025,C1032,Matthew Williams,Desk Mat,Office,3,23.029999999999998,NE,,
+ORD10045,11/3/2025,C1030,Paul Lopez,Standing Desk,furniture,3,299.09000000000003,west,Cancelled,
+ORD10020,29-07-2025,C1021,Joseph Brown,Ergonomic Footrest,Furniture,5,28.759999999999998,W,Cancelled,
+ORD10007,1/11/2025,C1023,Nancy Rodriguez,Laptop Stand,office,10,34.99 USD,Northeast,Completed,
+ORD10056,5/1/2025,,  SARAH BROWN  ,Notebook Set,office supplies,0,7.67,SW,COMPLETED,
+ORD10076,10/4/2025,C1012,Susan Davis,Desk Mat,Office,-3,22.459999999999997,SW,COMPLETED,
+ORD10001,11/22/2025,C1022,Jennifer Lopez,Webcam HD,electronics,4,,west,Returned,
+ORD10136,3/1/2025,C1032,Matthew Williams,Desk Lamp,Office,6,23.82,west,,
+ORD10128,12/15/2025,C1017,Richard Rodriguez,Ballpoint Pens (12pk),Office Supplies,2,4.17,Southeast,COMPLETED,
+ORD10069,2/24/2025,C1020,Linda Williams,Monitor 24in,ELECTRONICS,7,179.57000000000002,mid west,COMPLETED,
+ORD10137,3/26/2025,C1004,Karen Moore,Desk Mat,Office,9,,SW,Returned,
+ORD10043,7/5/2025,C1032,  Matthew Williams  ,Notebook Set,Office Supplies,11,5.2,MW,,
+ORD10111,3/1/2025,C1035,Robert Davis,USB-C Cable,Electronics,8,$9.99 ,SW,,WELCOME5
+ORD10090,9/10/2025,C1011,Michael Moore,Laptop Stand,Office,10,36.2,Southwest,completed,WELCOME5
+ORD10073,9/16/2025,C1009,Charles Martin,Desk Mat,Office,-4,22.09,Southwest,Cancelled,
+ORD10024,5/13/2025,C1032,Matthew Williams,USB-C Cable,Electronics,5,10.08,south east,Cancelled,WELCOME5
+ORD10143,3/2/2025,C1019,  Anthony Hernandez  ,Desk Mat,Office,12,21.389999999999997,south west,COMPLETED,
+ORD10093,10/16/2025,C1010,James Moore,Bluetooth Speaker,Electronics,1,$44.99 ,SW,Pending,none
+ORD10104,3/12/2025,C1016,Matthew Wilson,Desk Lamp,Office,10,24.99 USD,NORTHEAST,Returned,WELCOME5
+ORD10064,5/23/2025,C1030,Paul Lopez,Office Chair,furniture,7,151.89000000000001,south west,Completed,
+ORD10068,7/23/2025,C1008,Michael Davis,Desk Mat,Office,8,23.439999999999998,SW,Pending,none
+ORD10026,8/3/2025,C1024,Betty Johnson,Standing Desk,Furniture,9,301.58,W,,WELCOME5
