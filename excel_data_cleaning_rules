@@ -1,0 +1,10 @@
+# Cleaning philosophy and rules:
+
+Always copy or back up dataset you are correcting
+Work left to right through each column
+·        Names   =PROPER(TRIM(CLEAN(A3)))
+o             Text to column to split full name into first and last
+o             Merge, =TEXTJOIN   (=CONCAT will leave extra blank space if blank cell such as middle initial column is blank)
+·        Email Addresses, URLs, or Product IDs: PROPER will capitalize the first letter of everything. This turns john.doe@email.com into John.Doe@Email.Com. Use =LOWER(TRIM(CLEAN(A3))) for emails instead.
+·        State Abbreviations or Capitalized Acronyms: PROPER will turn "USA" or "NY" into "Usa" or "Ny". Use =UPPER(TRIM(CLEAN(A3))) for codes.
+·        Currency, Salary etc.   best to remove special characters (dollar sign). switch to number to prevent issues with SQL converting it to text due to $ sign.
