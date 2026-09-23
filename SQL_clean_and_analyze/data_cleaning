@@ -1,1 +1,171 @@
+-- =====================================================================
+-- Data Cleaning: Messy Sales Orders Dataset
+-- Approach: raw data untouched in staging table; all cleaning logic
+-- lives in a view (or CTAS) that layers clean columns + audit flags.
+-- =====================================================================
 
+-- STEP 1: Load raw CSV into a staging table exactly as-is.
+-- Every column comes in as TEXT so nothing gets silently coerced/lost
+-- on load (e.g. "$59.99" or "N/A" would break a NUMERIC column).
+
+DROP TABLE IF EXISTS raw_sales_orders;
+CREATE TABLE raw_sales_orders (
+    order_id        TEXT,
+    order_date      TEXT,
+    customer_id     TEXT,
+    customer_name   TEXT,
+    product         TEXT,
+    category        TEXT,
+    quantity        TEXT,
+    unit_price      TEXT,
+    region          TEXT,
+    status          TEXT,
+    discount_code   TEXT
+);
+
+-- \copy raw_sales_orders FROM 'messy_sales_orders.csv' WITH (FORMAT csv, HEADER true);
+
+
+-- STEP 2: Remove exact duplicate rows first (before any cleaning),
+-- since duplicates should be evaluated on raw values, not cleaned ones.
+-- Keep the pattern honest: flag them, don't just delete silently.
+
+DROP TABLE IF EXISTS raw_sales_orders_deduped;
+CREATE TABLE raw_sales_orders_deduped AS
+SELECT DISTINCT ON (order_id, order_date, customer_id, customer_name,
+                     product, category, quantity, unit_price, region,
+                     status, discount_code)
+    *
+FROM raw_sales_orders;
+
+-- Note: this still leaves the "same order_id, different quantity" rows
+-- (data entry corrections) — those are a business decision, not a
+-- cleaning one. Flag them for review rather than guessing which is right:
+
+SELECT order_id, COUNT(*) AS version_count
+FROM raw_sales_orders_deduped
+GROUP BY order_id
+HAVING COUNT(*) > 1;
+
+
+-- STEP 3: Build the cleaned view. Every messy column gets a *_clean
+-- version plus a *_flag column documenting what happened to it.
+
+CREATE OR REPLACE VIEW clean_sales_orders AS
+WITH parsed AS (
+    SELECT
+        order_id,
+        customer_id,
+        customer_name,
+        product,
+        category,
+        quantity,
+        unit_price,
+        region,
+        status,
+        discount_code,
+
+        -- ORDER_DATE: five different formats in the raw data.
+        -- Try each known pattern in turn; NULL (and flag) if none match.
+        COALESCE(
+            to_date(NULLIF(order_date,''), 'YYYY-MM-DD'),
+            to_date(NULLIF(order_date,''), 'MM/DD/YYYY'),
+            to_date(NULLIF(order_date,''), 'DD-MM-YYYY'),
+            to_date(NULLIF(order_date,''), 'FMMonth DD, YYYY'),
+            to_date(NULLIF(order_date,''), 'MM/DD/YY')
+        ) AS order_date_clean,
+
+        -- QUANTITY: strip to digits/sign only, cast, catch "N/A" etc.
+        CASE
+            WHEN quantity ~ '^-?[0-9]+$' THEN quantity::INT
+            WHEN quantity ~ '^-?[0-9]+\.[0-9]+$' THEN ROUND(quantity::NUMERIC)::INT
+            ELSE NULL
+        END AS quantity_clean,
+
+        -- UNIT_PRICE: strip $ signs and " USD" suffixes, then cast.
+        NULLIF(
+            regexp_replace(unit_price, '[^0-9.]', '', 'g'),
+            ''
+        )::NUMERIC AS unit_price_clean,
+
+        -- REGION: standardize the ~5 spellings per region into one value.
+        CASE
+            WHEN region ILIKE '%northeast%' OR region ILIKE 'NE' OR region ILIKE 'N.East' THEN 'Northeast'
+            WHEN region ILIKE '%southeast%' OR region ILIKE 'SE' OR region ILIKE 'S.East' THEN 'Southeast'
+            WHEN region ILIKE '%midwest%'   OR region ILIKE 'MW'                          THEN 'Midwest'
+            WHEN region ILIKE '%southwest%' OR region ILIKE 'SW'                          THEN 'Southwest'
+            WHEN region ILIKE '%west%'      OR region = 'W'                               THEN 'West'
+            ELSE NULL
+        END AS region_clean,
+
+        -- CATEGORY: normalize casing only (values are otherwise consistent)
+        INITCAP(TRIM(category)) AS category_clean,
+
+        -- CUSTOMER_NAME: trim whitespace, normalize casing
+        INITCAP(TRIM(customer_name)) AS customer_name_clean,
+
+        -- STATUS: normalize casing
+        INITCAP(TRIM(status)) AS status_clean,
+
+        -- DISCOUNT_CODE: collapse NULL / '' / 'none' into one true NULL
+        CASE
+            WHEN discount_code IS NULL THEN NULL
+            WHEN TRIM(LOWER(discount_code)) IN ('', 'none') THEN NULL
+            ELSE UPPER(TRIM(discount_code))
+        END AS discount_code_clean
+
+    FROM raw_sales_orders_deduped
+)
+SELECT
+    order_id,
+    order_date_clean,
+    customer_id,
+    customer_name_clean AS customer_name,
+    product,
+    category_clean       AS category,
+    quantity_clean,
+    unit_price_clean,
+    region_clean          AS region,
+    status_clean          AS status,
+    discount_code_clean   AS discount_code,
+
+    -- AUDIT FLAGS: surface exactly what was wrong with each row,
+    -- rather than silently dropping or guessing.
+    (order_date_clean IS NULL)            AS flag_bad_date,
+    (customer_id IS NULL)                 AS flag_missing_customer_id,
+    (quantity_clean IS NULL)              AS flag_bad_quantity,
+    (quantity_clean < 0)                  AS flag_return,
+    (quantity_clean = 0)                  AS flag_zero_quantity,
+    (unit_price_clean IS NULL)            AS flag_bad_price,
+    (region_clean IS NULL)                AS flag_unknown_region
+
+FROM parsed;
+
+
+-- STEP 4: Quick data quality summary — this is your "before/after
+-- counts" table for the Data Quality Report write-up.
+
+SELECT
+    COUNT(*)                                   AS total_rows,
+    SUM(CASE WHEN flag_bad_date THEN 1 ELSE 0 END)             AS bad_dates,
+    SUM(CASE WHEN flag_missing_customer_id THEN 1 ELSE 0 END)  AS missing_customer_ids,
+    SUM(CASE WHEN flag_bad_quantity THEN 1 ELSE 0 END)         AS bad_quantities,
+    SUM(CASE WHEN flag_return THEN 1 ELSE 0 END)                AS returns,
+    SUM(CASE WHEN flag_zero_quantity THEN 1 ELSE 0 END)        AS zero_quantities,
+    SUM(CASE WHEN flag_bad_price THEN 1 ELSE 0 END)             AS bad_prices,
+    SUM(CASE WHEN flag_unknown_region THEN 1 ELSE 0 END)       AS unknown_regions
+FROM clean_sales_orders;
+
+
+-- STEP 5 (optional): a "fully valid rows only" view for your downstream
+-- window function / aggregation queries, once you've decided how to
+-- treat returns, zero-quantity rows, and unknowns for analysis purposes.
+
+CREATE OR REPLACE VIEW clean_sales_orders_valid AS
+SELECT *
+FROM clean_sales_orders
+WHERE NOT flag_bad_date
+  AND NOT flag_bad_quantity
+  AND NOT flag_bad_price
+  AND quantity_clean > 0        -- excludes returns and zero-qty rows
+  AND region IS NOT NULL;
