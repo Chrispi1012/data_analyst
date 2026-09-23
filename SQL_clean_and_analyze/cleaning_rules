@@ -1,1 +1,21 @@
+Cleaning philosophy and rules:
 
+Always copy or back up dataset you are correcting
+  Load raw CSV as-is. 
+  Every column as TEXT
+  Create view
+
+Remove duplicates before cleaning
+
+Work left to right through each column
+    Names   INITCAP(TRIM(name_column)) AS name_column_cleaned
+      Split full name into first and last:
+      Merge first and last name into full-name:  CONCAT_WS(' ', first_name, middle_initial, last_name) AS full_name_clean  --CONCAT_WS to avoid extra space if no middle name
+        
+    Email Addresses, URLs, or Product IDs: 
+        
+    State Abbreviations or Capitalized Acronyms: 
+    
+    Currency, Salary etc.: 
+    
+    Dates:
