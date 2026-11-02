@@ -1,11 +1,11 @@
 Cleaning philosophy and rules:
 
-Always copy or back up dataset you are correcting
+Always copy or back up dataset being wrangled/cleaned
   Load raw CSV as-is. 
   Every column as TEXT
   Create view
 
-Remove duplicates before cleaning
+Complete certain cleaning before removing duplicates to avoid missing some (i.e. Student ID as SID003 and 003 would not depuplicate)
 
 Work left to right through each column
     Names   INITCAP(TRIM(name_column)) AS name_column_cleaned
